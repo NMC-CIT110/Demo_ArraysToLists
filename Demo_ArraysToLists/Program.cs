@@ -6,6 +6,17 @@ using System.Threading.Tasks;
 
 namespace Demo_ArraysToLists
 {
+    // **************************************************
+    //
+    // Title: Demo - Arrays to Lists
+    // Description: Demonstration of adding and displaying integer
+    //              values using arrays and lists
+    // Application Type: Console
+    // Author: Velis, John
+    // Dated Created: 3/16/2020
+    // Last Modified: 
+    //
+    // **************************************************
     class Program
     {
         static void Main(string[] args)
@@ -42,10 +53,21 @@ namespace Demo_ArraysToLists
         {
             DisplayScreenHeader("Display List Numbers");
 
+            //
+            // this method will sort the list in assenting order
+            //
+            listNumbers.Sort();
+
             foreach (int listNumber in listNumbers)
             {
                 Console.WriteLine($"\t{listNumber}");
             }
+
+            Console.WriteLine();
+            Console.WriteLine($"Average: {listNumbers.Average()}");
+            Console.WriteLine($"Maximum: {listNumbers.Max()}");
+            Console.WriteLine($"Minimum: {listNumbers.Min()}");
+            Console.WriteLine($"Sum: {listNumbers.Sum()}");
 
             DisplayContinuePrompt();
         }
